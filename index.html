@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Heba Project3</title>
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top opacity-75" style="z-index: 50;">
+        <div class="container-fluid text-info">
+            <img  class="img-fluid mx-3" height="60" width="60" src="IMAGES/logo.jpeg" alt="logo" draggable="false">
+          <a class="navbar-brand title pe-3" href="#" style="border-right: 1px solid rgba(128, 128, 128, 0.595);" >Yummy</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-warning-emphasis fs-5" aria-current="page" href="#"><b>H</b>ome</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-warning-emphasis fs-5" href="#"><b>A</b>bout</a>
+              </li>
+              <li class="nav-item1 dropdown">
+                <a class="nav-link dropdown-toggle text-warning-emphasis fs-5 border border-2 border-warning rounded rounded-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Iteams
+                </a>
+                <ul class="dropdown-menu bg-light bg-opacity-75">
+                  <li><a class="dropdown-item text-warning-emphasis fs-5 fw-bold " href="#">Arabian</a></li>
+                  <li><a class="dropdown-item text-warning-emphasis fs-5 fw-bold" href="#">French</a></li>
+                  <li><a class="dropdown-item text-warning-emphasis fs-5 fw-bold" href="#">Indian</a></li>
+                  <li><a class="dropdown-item text-warning-emphasis fs-5 fw-bold" href="#">Italian</a></li>
+                  <li><a class="dropdown-item text-warning-emphasis fs-5 fw-bold" href="#">American</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 border-warning" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-warning-bg-subtle  btn-warning text-light mx-3 w-50" data-bs-toggle="modal" data-bs-target="#login" type="submit" >Login</button>
+              <button class="btn btn-warning-bg-subtle  btn-warning text-light w-50" data-bs-toggle="modal" data-bs-target="#signup" type="submit">Sign up</button>
+            </form>
+          </div>
+        </div>
+      </nav> 
+
+      <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-warning">
+              <h1 class="modal-title fs-5 text-light" id="loginLabel">Login Form</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label text-warning">Your Email</label>
+                  <input type="email" class="form-control border border-1 border-warning" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label text-warning">Your Passward</label>
+                  <input type="password" class="form-control border border-1 border-warning" id="recipient-name">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning text-light" data-bs-dismiss="modal">Confirm</button>
+              <button type="button" class="btn btn-warning text-light" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-warning">
+              <h1 class="modal-title fs-5 text-light" id="signupLabel">Sign up Form</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label text-warning">Your Username</label>
+                  <input type="text" class="form-control border border-1 border-warning" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label text-warning">Your Email</label>
+                  <input type="email" class="form-control border border-1 border-warning" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label text-warning">Your Passward</label>
+                  <input type="password" class="form-control border border-1 border-warning" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label text-warning">Confirm Passward</label>
+                  <input type="password" class="form-control border border-1 border-warning" id="recipient-name">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning text-light" data-bs-dismiss="modal">Create</button>
+              <button type="button" class="btn btn-warning text-light"data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <aside>
+        <div class="container-fluid position-relative">
+        <div class="d-flex flex-column justifiy-content ms-auto"style="position:fixed;z-index: 30; top:20%; right: 20px;">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-whatsapp-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+        </div>
+        </div><!--container-fluid  -->
+      </aside>
+      <div id="carouselExampleCaptions" class="carousel slide" style="padding-top: 80px;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="IMAGES/Arabian.jpg" class="d-block w-100"style="height: 600px;" alt="Arabian" draggable="false">
+            <div class="carousel-caption d-none d-md-block fs-2 bg-warning bg-opacity-25 rounded-4" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+              <h2>Arabian Food</h2>
+              <p>We have a various types of Arabian Food.</p>
+              <button type="button" class="btn btn-warning fs-5 text-light">Order Now</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="IMAGES/french.jpg" class="d-block w-100"style="height: 600px;" alt="french" draggable="false">
+            <div class="carousel-caption d-none d-md-block fs-2 bg-warning bg-opacity-25 rounded-4" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+              <h2>French Food</h2>
+              <p>We have a various types of French Food.</p>
+              <button type="button" class="btn btn-warning fs-5 text-light">Order Now</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="IMAGES/Indian.jpg" class="d-block w-100"style="height: 600px;" alt="Indian" draggable="false">
+            <div class="carousel-caption d-none d-md-block fs-2 bg-warning bg-opacity-25 rounded-4" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+              <h2>Indian Food</h2>
+              <p>We have a various types of Indian Food.</p>
+              <button type="button" class="btn btn-warning fs-5 text-light">Order Now</button>
+            </div>
+          </div>
+            <div class="carousel-item">
+              <img src="IMAGES/Italian-Food.jpg" class="d-block w-100"style="height: 600px;" alt="Italian" draggable="false">
+              <div class="carousel-caption d-none d-md-block fs-2 bg-warning bg-opacity-25 rounded-4" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                <h2>Italian Food</h2>
+                <p>We have a various types of Italian Food.</p>
+                <button type="button" class="btn btn-warning fs-5 text-light">Order Now</button>
+              </div>
+          </div>
+            <div class="carousel-item">
+              <img src="IMAGES/american.jpg" class="d-block w-100"style="height: 600px;" alt="american" draggable="false">
+              <div class="carousel-caption d-none d-md-block fs-2 bg-warning bg-opacity-25 rounded-4" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                <h2>American Food</h2>
+                <p>We have a various types of American Food.</p>
+                <button type="button" class="btn btn-warning fs-5 text-light">Order Now</button>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card">
+        <div class="card-body" style="background-color:rgba(247, 167, 69, 0.676)">
+          <h2 class="card-title title" style="text-shadow: 2px 2px 30px white;">Welcome</h2>
+          <p class="card-text text-light fw-bold" style="font-family: Georgia, 'Times New Roman', Times, serif;word-spacing: 5px;">We Offer To You Various Types Of Food Anything U Want Just Call Us ND We Will Do Our Best.</p>
+          <a href="#" class="btn btn-warning fs-5 text-light" style="box-shadow: 1px 1px 3px 1px white;">Learn More</a>
+        </div>
+      </div>
+      <hr>
+      <div class="mx-auto my-3 p-3 text-light text-center rounded-4" style="background-color:rgb(247, 167, 69)">
+      <h2 style="word-spacing: 5px;font-size: 45px;text-shadow: 1px 1px 40px white;">Popular Dishes For Various Types </h2>
+      </div>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Arabian Food
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">The cuisine of the Arab world, defined as the various regional cuisines of the Arab people, spanning from the Maghreb to the Fertile Crescent and the Arabian Peninsula.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              French Food
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">French cuisine is the cooking traditions and practices from France. In the 14th century, Guillaume Tirel, a court chef known as "Taillevent", wrote Le Viandier, one of the earliest recipe collections of medieval France.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Indian Food
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Food is an important part of Indian culture, playing a role in everyday life as well as in festivals. In many families, everyday meals are sit-down affairs consisting of two to three main course dishes, varied accompaniments such as chutneys and pickles, carbohydrate staples such as Rice and Roti (bread), as well as desserts.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+              Italian Food
+            </button>
+          </h2>
+          <div id="flush-collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Italian cuisine pronounced is a Mediterranean cuisine consisting of the ingredients, recipes and cooking techniques developed across the Italian Peninsula and later spread around the world together with waves of Italian diaspora.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
+              American Food
+            </button>
+          </h2>
+          <div id="flush-collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">American cuisine consists of the cooking style and traditional dishes prepared in the United States of America. It has been significantly influenced by Europeans, indigenous Native Americans, Africans, Latin Americans, Asians, Pacific Islanders, and many other cultures and traditions.</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="mx-auto my-3 p-3 text-light text-center rounded-4" style="background-color:rgb(247, 167, 69)">
+        <h2 style="word-spacing: 5px;font-size: 45px;text-shadow: 1px 1px 30px white;"> What about Your Feedback</h2>
+        </div>
+        <div class="card" style="background-color: rgba(247, 167, 69, 0.676);">
+          <div class="card-body">
+            <h5 class="card-title text-light fs-3" style="text-shadow: 1px 1px 20px white;">Write Your Feedback</h5>
+            <button type="button" class="btn btn-warning text-light afterbtn" style="box-shadow: 1px 1px 3px 1px white;" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+              Confirm
+            </button>
+            <textarea  class="form-control d-block mx-auto mt-3"  cols="100" rows="5" placeholder="Write Here Your Feedback "></textarea>
+          </div><!-- card-body -->
+        </div><!-- card -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Thanks</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body title">
+        We Saved Your Feedback
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning text-light" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <hr>
+        
+        <div class="fixedimage image1"></div>
+
+        <div class="mx-auto p-3 text-light text-center rounded-4" style="background-color:rgb(247, 167, 69)">
+        <h2 class=" fs-1" style="text-shadow: 2px 1px 20px white;"> Popular Dishes For Various Types</h2>
+      </div>
+
+        <div class="container my-4 " style="background-color: aliceblue;">
+        <div class="row justify-content-around">
+
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 m-1 mb-3 " style="box-shadow: 1px 1px 2px 1px orange;" >
+            <img src="IMAGES/img1.jpg" class="card-img-top w-100 h-100 mt-2" alt="Mandi">
+            <div class="card-body">
+              <h5 class="card-title">Mandi</h5>
+              <p class="card-text text-secondary">This is a Perfect Arabian Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 mb-3" style="box-shadow: 1px 1px 2px 1px orange;" >
+            <img src="IMAGES/img2.jpg" class="card-img-top w-100 h-100 mt-2 " alt="Macarons">
+            <div class="card-body">
+              <h5 class="card-title">Macarons</h5>
+              <p class="card-text text-secondary">This is a Perfect French Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 mb-3" style="box-shadow: 1px 1px 2px 1px orange;" >
+            <img src="IMAGES/img3.jpg" class="card-img-top w-100 h-100 mt-2" alt="sandesh">
+            <div class="card-body">
+              <h5 class="card-title">Sandesh</h5>
+              <p class="card-text text-secondary">This is a Perfect Indian Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran  col-lg-3 col-sm-5 col-xs-12 m-1 mb-3" style="box-shadow: 1px 1px 2px 1px orange;" >
+            <img src="IMAGES/img4.jpg" class="card-img-top w-100 h-100 mt-2" alt="piza">
+            <div class="card-body">
+              <h5 class="card-title">Piza</h5>
+              <p class="card-text text-secondary">This is a Perfect Italian Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 mb-3" style="box-shadow: 1px 1px 2px 1px orange;">
+            <img src="IMAGES/img5.jpg" class="card-img-top w-100 h-100 mt-2" alt="burgar">
+            <div class="card-body">
+              <h5 class="card-title">Burgar</h5>
+              <p class="card-text text-secondary">This is a Perfect American Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 mb-3" style="box-shadow: 1px 1px 2px 1px orange;" >
+            <img src="IMAGES/img6.jpg" class="card-img-top w-100 h-100 mt-2" alt=" Bruschetta">
+            <div class="card-body">
+              <h5 class="card-title">Bruschetta</h5>
+              <p class="card-text text-secondary">This is a Perfect Italian Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 mb-3" style="box-shadow: 1px 1px 2px 1px orange;" >
+            <img src="IMAGES/img7.jpg" class="card-img-top w-100 h-100 mt-2" alt="Momos">
+            <div class="card-body">
+              <h5 class="card-title">Momos</h5>
+              <p class="card-text text-secondary">This is a Perfect Indian Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 mb-2" style="box-shadow: 1px 1px 2px 1px orange;">
+            <img src="IMAGES/img8.jpg" class="card-img-top w-100 h-100 mt-2" alt="kabsa">
+            <div class="card-body">
+              <h5 class="card-title">kabsa</h5>
+              <p class="card-text text-secondary">This is a Perfect Arabian Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          <div class="card cardtran col-lg-3 col-sm-5 col-xs-12 mb-2" style="box-shadow: 1px 1px 2px 1px orange;" >
+            <img src="IMAGES/img9.jpg" class="card-img-top w-100 h-100 mt-2" alt="Ratatouille">
+            <div class="card-body">
+              <h5 class="card-title">Ratatouille</h5>
+              <p class="card-text text-secondary">This is a Perfect French Food.</p>
+              <a href="#" class="btn btn-warning text-light">Know More</a>
+            </div>
+          </div>
+          </div><!-- justify-content-around -->
+      </div><!--container-fluid  -->
+
+      <div class="fixedimage image2"></div>
+
+      <div class="mx-auto p-3 text-light text-center rounded-4" style="background-color:rgb(247, 167, 69)">
+        <h2 class=" fs-1" style="text-shadow: 2px 1px 20px white;"> Thanks For</h2>
+      </div>
+
+      <div class="container my-4">
+        <div class="row justify-content-around">
+
+          <div class="card cardhover col-sm-5" style="background-image: url(IMAGES/Heba.jpg);background-size: cover;background-position: center;height: 500px;">
+            <div class="card-img-overlay">
+              <div class="card-body mb-5">
+              <h5 class="card-title text-light">ALL Thanks And Appreciation</h5>
+              <p class="card-text text-light"><small><i class="far fa-clock"></i> 4 November 2023</small></p>
+            </div><!-- card-body -->
+            
+            <div class="card-footer" style="border: none;background: none;">
+              <div class="info mt-5" width="50" hight="50">
+                <img class="ms-2 mt-5 rounded-circle w-25 h-25" src="IMAGES/Heba.jpg" alt="heba" draggable="false">
+                <h5 class="card-title text-light mt-2">Eng.Heba Bassiouny "Eng.3Sola"</h5>
+              <p class="card-text text-light"><small>Web Developer</small></p>
+              </div><!-- info -->
+            </div><!-- card-footer -->
+          </div><!-- card-img-overlay -->
+          </div><!-- card -->
+
+          <div class="card  cardhover col-sm-5" style="background-image: url(IMAGES/islam.jpg);background-size: cover;background-position: center;height: 500px;">
+            <div class="card-img-overlay">
+              <div class="card-body mb-5">
+              <h5 class="card-title text-light">ALL Thanks And Appreciation</h5>
+              <p class="card-text text-light"><small><i class="far fa-clock"></i> 4 November 2023</small></p>
+            </div><!-- card-body  -->
+
+            <div class="card-footer" style="border: none;background: none;">
+              <div class="info mt-5" width="50" hight="50">
+                <img class="ms-2 mt-5 rounded-circle w-25 h-25" src="IMAGES/islam.jpg" alt="islam" draggable="false">
+                <h5 class="card-title text-light mt-2">Eng.Islam Mohamed</h5>
+              <p class="card-text text-light"><small>Web Developer</small></p>
+              </div><!-- info -->
+            </div><!-- card-footer -->
+          </div><!-- card-img-overlay -->
+        </div><!-- card -->
+        </div><!-- row -->
+      </div><!-- container -->
+      <hr>
+
+      <div class="container">
+        <h2 class="title text-center fs-1">Food News</h2>
+
+        <div class="d-flex flex-column my-3">
+
+          <div class="card mb-5 col-12 w-100" style="box-shadow: 1px 1px 5px 1px gray;">
+            <div class="row g-0 newsover z-2">
+              <div class="col-md-4" width="300px" height="200px" style="overflow: hidden;">
+                <img src="IMAGES/news arab .jpg" class="img-fluid rounded-start over w-100 h-100 " style="object-fit: cover;" alt="arab" draggable="false">
+              </div>
+              <div class="col-md-8 ">
+                <div class="card-body ">
+                  <h5 class="card-title fs-3">Arabian Food</h5>
+                  <div class="news-info">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Monday,13 Nov,2023</span>
+                    <div class="newsline"></div>
+                  </div>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <ul class="news-list">
+                    <li class="btn btn-warning text-light"><i class="fas fa-tag"></i> Podcast</li>
+                    <li class="btn btn-warning text-light"><i class="fas fa-clock"></i> 50 Min</li>
+                    <li class="btn btn-warning text-light"><a href="#" ><i class="fas fa-play"></i> Play Video</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5 col-12 w-100" style="box-shadow: 1px 1px 5px 1px gray;" width="300px" height="200px" >
+            <div class="row g-0 z-2 newsover2">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fs-3">French Food</h5>
+                  <div class="news-info">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Monday,13 Nov,2023</span>
+                    <div class="newsline"></div>
+                  </div>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <ul class="news-list">
+                    <li class="btn btn-warning text-light"><i class="fas fa-tag"></i> Podcast</li>
+                    <li class="btn btn-warning text-light"><i class="fas fa-clock"></i> 50 Min</li>
+                    <li class="btn btn-warning text-light"><a href="#" ><i class="fas fa-play"></i> Play Video</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 " width="300px" height="400px" style="overflow: hidden;">
+                <img src="IMAGES/news french.jpg" class="img-fluid rounded-start over2 w-100 h-100 d-block" alt="french" draggable="false">
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5 col-12 w-100" style="box-shadow: 1px 1px 5px 1px gray;">
+            <div class="row g-0 z-2 newsover">
+              <div class="col-md-4" width="300px" height="400px" style="overflow: hidden;">
+                <img src="IMAGES/news indian .jpg" class="img-fluid rounded-start over w-100 h-100" alt="indian" draggable="false">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fs-3">Indian Food</h5>
+                  <div class="news-info">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Monday,13 Nov,2023</span>
+                    <div class="newsline"></div>
+                  </div>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <ul class="news-list">
+                    <li class="btn btn-warning text-light"><i class="fas fa-tag"></i> Podcast</li>
+                    <li class="btn btn-warning text-light"><i class="fas fa-clock"></i> 50 Min</li>
+                    <li class="btn btn-warning text-light"><a href="#" ><i class="fas fa-play"></i> Play Video</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5 col-12 w-100" style="box-shadow: 1px 1px 5px 1px gray;" style="overflow: hidden;">
+            <div class="row g-0 z-2 newsover2">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fs-3">Italian Food</h5>
+                  <div class="news-info">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Monday,13 Nov,2023</span>
+                    <div class="newsline"></div>
+                  </div>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <ul class="news-list">
+                    <li class="btn btn-warning text-light"><i class="fas fa-tag"></i> Podcast</li>
+                    <li class="btn btn-warning text-light"><i class="fas fa-clock"></i> 50 Min</li>
+                    <li class="btn btn-warning text-light"><a href="#" ><i class="fas fa-play"></i> Play Video</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4" width="300px" height="200px" style="overflow: hidden;">
+                <img src="IMAGES/news italian.jpg" class="img-fluid rounded-start over2 w-100 h-100" alt="italian" draggable="false">
+              </div>
+            </div>
+          </div>
+          
+          <div class="card mb-5 col-12 w-100" style="box-shadow: 1px 1px 5px 1px gray;" >
+            <div class="row g-0 z-2 newsover">
+              <div class="col-md-4" width="300px" height="200px"style="overflow: hidden;" >
+                <img src="IMAGES/news american.jpg" class="img-fluid rounded-start over w-100 h-100" alt="american" draggable="false">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fs-3">American Food</h5>
+                  <div class="news-info">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Monday,13 Nov,2023</span>
+                    <div class="newsline"></div>
+                  </div>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <ul class="news-list">
+                    <li class="btn btn-warning text-light"><i class="fas fa-tag"></i> Podcast</li>
+                    <li class="btn btn-warning text-light"><i class="fas fa-clock"></i> 50 Min</li>
+                    <li class="btn btn-warning text-light"><a href="#" ><i class="fas fa-play"></i> Play Video</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- d-flex -->
+      </div><!-- container -->
+
+      <div class="container">
+        <h2 class="title text-center fs-1">Join US</h2>
+        <div class="row justify-content-center my-3">
+
+          <div class="card m-3" style="width: 18rem;">
+            <div class="card-body"  style="margin: auto;cursor: pointer;">
+              <h5 class="card-title text-center text-warning fs-3">Like the page</h5>
+              <img src="IMAGES/twetter.jpg"  class="rounded-5 bright ms-4" alt="twetter">
+              <a href="#" class="card-link d-block ms-4">Go To link</a>
+            </div>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <div class="card-body" style="margin: auto;cursor: pointer;">
+              <h5 class="card-title text-center text-warning fs-3">Chat Us</h5>
+              <img src="IMAGES/whats.jpg" class="rounded-5 ms-3" alt="whats">
+              <a href="#" class="card-link d-block  ms-3">Go To link</a>
+            </div>
+          </div>
+
+          <div class="card m-3" style="width: 18rem;">
+            <div class="card-body" style="margin: auto;cursor: pointer;">
+              <h5 class="card-title text-center text-warning fs-3">Like the page</h5>
+              <img src="IMAGES/in.jpg" class="rounded-5 ms-4" alt="in">
+              <a href="#" class="card-link d-block ms-4">Go To link</a>
+            </div>
+          </div>
+          <div class="card m-3" style="width: 18rem;">
+            <div class="card-body" style="margin: auto;cursor: pointer;">
+              <h5 class="card-title text-center text-warning fs-3">Subscribe Now</h5>
+              <img src="IMAGES/insta.jpg" class="rounded-5 ms-5" alt="insta">
+              <a href="#" class="card-link d-block  ms-5">Go To link</a>
+            </div>
+          </div>
+        </div><!-- row -->
+      </div><!-- container -->
+
+      <div class="container-fluid bg-warning" style="margin: auto;text-align: center;">
+        <div class="row justify-content-around">
+        <div class="col-md-4 my-3 text-light footer-info">
+          <div class="footer-head">
+            <img  class="img-fluid mx-3 rounded-5" height="60" width="60" src="IMAGES/logo.jpeg" alt="logo" draggable="false" style="box-shadow: 1px 1px 10px 3px white;">
+            <h5 class="d-inline">Good Company</h5>
+          </div><!--footer-head  -->
+          <p>Tel : 000-000-000</p>
+          <p>Address : EGYPT</p>
+          <p>Fax : 000-000-000</p>
+        </div>
+
+        <div class="col-md-4 my-3 footer-info head2">
+          <div class="footer-head">
+          <img  class="img-fluid mx-3 rounded-5" height="60" width="60" src="IMAGES/logo.jpeg" alt="logo" draggable="false" style="box-shadow: 1px 1px 10px 3px white;" >
+          <h5 class="d-inline"> Important links</h5>
+        </div><!--footer-head  -->
+        <p> <a href="#">Visit Us</a></p>
+        <p> <a href="#">Take alook</a></p>
+        <p> <a href="#">Rate Us</a></p>
+      </div>
+
+        <div class="col-md-4 my-3 text-light footer-info">
+          <div class="footer-head">
+          <img  class="img-fluid mx-3 rounded-5" height="60" width="60" src="IMAGES/logo.jpeg" alt="logo" draggable="false" style="box-shadow: 1px 1px 10px 3px white;">
+          <h5 class="d-inline"> Vision</h5>
+        </div><!--footer-head  -->
+        <p>Serveices for all</p>
+        <p>Provide best serveices</p>
+        <p>You will be better than before</p>
+      </div>
+      <div class="copy title fs-2">
+        COPYRIGHT &copy; 2020 HEBA BASSIOUNY, GOOD COMPANY. ALL RIGHTS
+      </div>
+      </div><!-- row -->
+      </div><!-- container-fluid -->
+
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
